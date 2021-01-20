@@ -24,7 +24,12 @@
 
 ## Description
 
+<<<<<<< HEAD
 This is an example of the nest framework to get started.
+=======
+This is an example of getting started with the framework.
+
+>>>>>>> c9702112e9407cbd7310d9ca19dd6373a06e2083
 
 ## Links
 
