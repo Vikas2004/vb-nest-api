@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Get, Controller, Render } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -10,7 +10,8 @@ export class AppController {
     return this.appService.getHello();
   }
   @Get('/about')
-  getAbout(): string {
-    return this.appService.getAbout();
-  }
+  @Render('about')
+  root() {
+    return { message: this.appService.getAbout() };
+}
 }
