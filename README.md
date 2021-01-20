@@ -24,7 +24,13 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This is an example of getting started with the framework.
+
+
+## Links
+
+- [Source code](https://github.com/Vikas2004/vb-nest-api)
+- [App Link](https://vb-nest-api.herokuapp.com/) hosted on Heroku.
 
 ## Installation
 
