@@ -7,17 +7,12 @@ export class User {
     id:number;
 
     @Column({ 
-        type: 'varchar', 
-        nullable: false, 
-        unique: true,
-        length: 40 
+        type: 'varchar',  
     }) 
     email: string; 
 
     @Column({ 
-        type: 'varchar', 
-        nullable: false,
-        length: 20 
+        type: 'varchar'
     }) 
     password: string;
 }

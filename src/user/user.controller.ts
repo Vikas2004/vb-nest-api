@@ -18,6 +18,11 @@ export class UserController {
     return this.userService.findAll();
   }   
 
+  @Post('create')
+    async create(@Body() userData: User): Promise<any> {
+      return this.userService.create(userData);
+    }  
+   
   // @Get(':id')
   // findOne(@Param('id') id: string) {
   //   return this.userService.findOne(+id);

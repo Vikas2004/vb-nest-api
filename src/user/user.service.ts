@@ -3,15 +3,18 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from './entities/user.entity';
 import { UpdateResult, DeleteResult } from  'typeorm';
-// import { CreateUserDto } from './dto/create-user.dto';
+import { CreateUserDto } from './dto/create-user.dto';
 // import { UpdateUserDto } from './dto/update-user.dto';
 
 @Injectable()
+
 export class UserService {
   constructor(
     @InjectRepository(User)
     private readonly userRepository: Repository<User>
   ){}
+
+ 
   // create(createUserDto: CreateUserDto) {
   //   return 'This action adds a new user';
   // }
@@ -31,5 +34,9 @@ export class UserService {
 
 async delete(id): Promise<DeleteResult> {
   return await this.userRepository.delete(id);
+}
+
+async  create(user: User): Promise<User> {
+  return await this.userRepository.save(user);
 }
 }
