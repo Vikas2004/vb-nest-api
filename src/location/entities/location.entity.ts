@@ -15,5 +15,5 @@ export class Location {
     @Column({ 
         type: 'double'
     }) 
-    password: number;
+    longitude: number;
 }
