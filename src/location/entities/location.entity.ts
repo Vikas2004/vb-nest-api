@@ -1,18 +1,19 @@
+
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('User')
+@Entity('Location')
 
-export class User {
+export class Location {
     @PrimaryGeneratedColumn()
     id:number;
 
     @Column({ 
-        type: 'varchar' 
+        type: 'double' 
     }) 
-    email: string; 
+    latitude: number; 
 
     @Column({ 
-        type: 'varchar'
+        type: 'double'
     }) 
-    password: string;
+    password: number;
 }
