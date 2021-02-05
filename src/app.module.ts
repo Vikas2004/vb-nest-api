@@ -6,6 +6,7 @@ import { TeamModule } from './team/team.module';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user/entities/user.entity';
+import { LocationModule } from './location/location.module';
 
 
 @Module({
@@ -14,7 +15,7 @@ import { User } from './user/entities/user.entity';
     database: 'test.db',
     synchronize: true,
     entities: [User],
-  }), ],
+  }), LocationModule, ],
   controllers: [AppController],
   providers: [AppService],
 })

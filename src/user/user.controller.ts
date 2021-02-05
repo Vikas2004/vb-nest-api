@@ -14,12 +14,12 @@ export class UserController {
   // }
 
   @Get()
-  index():string{
-    return "This is the index page of user where all the users will be displayed.";
-  }
-  // index(): Promise<User[]> {
-    // return this.userService.findAll();
-// }
+  // index():string{
+  //   return "This is the index page of user where all the users will be displayed.";
+  // }
+  index(): Promise<User[]> {
+    return this.userService.findAll();
+}
     
   
 
